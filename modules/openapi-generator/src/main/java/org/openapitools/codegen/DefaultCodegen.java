@@ -2374,6 +2374,7 @@ public class DefaultCodegen implements CodegenConfig {
                     op.examples = new ExampleGenerator(schemas, openAPI).generateFromResponseSchema(exampleStatusCode, responseSchema, getProducesInfo(openAPI, operation));
                     op.defaultResponse = toDefaultValue(responseSchema);
                     op.returnType = cm.dataType;
+                    op.returnFormat = cm.dataFormat;
                     op.hasReference = schemas != null && schemas.containsKey(op.returnBaseType);
 
                     // lookup discriminator
